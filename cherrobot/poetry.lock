@@ -805,7 +805,7 @@ transformers = "^4.46.2"
 
 [package.source]
 type = "directory"
-url = "cherrobot/packages/chatbot_pack"
+url = "packages/chatbot_pack"
 
 [[package]]
 name = "chroma-hnswlib"
@@ -6959,4 +6959,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d10b5229f2b93d518c101476b100bb2c0acb6bc6e52bd2f5fddb0cac7e975b5a"
+content-hash = "87428f3be951e9626af8ee7ddbeeae5a4d9ab201ec72ffd862659f5501993e15"

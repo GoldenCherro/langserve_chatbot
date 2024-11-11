@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from langserve import add_routes
-from packages.chatbot_pack.components.stateful_chain import conversational_rag_chain
+from chatbot_pack.components.stateful_chain import conversational_rag_chain  # Make sure to replace 'your_module' with the actual module name
 
 app = FastAPI()
 
@@ -9,8 +9,6 @@ app = FastAPI()
 async def redirect_root_to_docs():
     return RedirectResponse("/docs")
 
-
-# Edit this to add the chain you want to add
 add_routes(app, conversational_rag_chain)
 
 if __name__ == "__main__":

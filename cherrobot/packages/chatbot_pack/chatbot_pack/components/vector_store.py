@@ -1,5 +1,5 @@
 from typing import Sequence
-from components.loader import loaded_data
+from .loader import loaded_data
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_ollama import OllamaEmbeddings
 from langchain_core.vectorstores import InMemoryVectorStore

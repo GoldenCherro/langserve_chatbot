@@ -1,11 +1,11 @@
-from components.vector_store import VectorStore
-from components.chain_rag import get_retriever_chain, get_rag_chain
+from .vector_store import VectorStore
+from .chain_rag import get_retriever_chain, get_rag_chain
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_ollama import ChatOllama
 
-file_path = "sourceFiles/AIEngineer.pdf"
+file_path = "packages/chatbot_pack/chatbot_pack/sourceFiles/AIEngineer.pdf"
 web_paths = ("https://www.promtior.ai/service","https://www.promtior.ai/")
 llm = ChatOllama(model="llama3.1", temperature=0,)
 

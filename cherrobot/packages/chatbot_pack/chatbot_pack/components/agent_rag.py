@@ -3,7 +3,7 @@ from langchain.tools.retriever import create_retriever_tool
 from langgraph.checkpoint.memory import MemorySaver
 from langchain import hub
 from langchain_ollama import ChatOllama
-from components.vector_store import get_vector_store
+from .vector_store import get_vector_store
 from langgraph.graph import CompiledGraph
 
 def agent_rag() -> CompiledGraph:
