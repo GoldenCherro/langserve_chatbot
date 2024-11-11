@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from langserve import add_routes
-from packages.chatbot_pack.chatbot.src.components.stateful_chain import conversational_rag_chain
+from packages.chatbot_pack.components.stateful_chain import conversational_rag_chain
 
 app = FastAPI()
 
