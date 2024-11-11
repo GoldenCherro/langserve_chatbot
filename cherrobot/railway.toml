@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+buildCommand = "poetry install"
+
+[deploy]
+startCommand = "poetry run langchain serve"
