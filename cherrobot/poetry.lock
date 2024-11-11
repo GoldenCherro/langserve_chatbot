@@ -767,7 +767,7 @@ files = [
 ]
 
 [[package]]
-name = "chatbot"
+name = "chatbot-pack"
 version = "0.1.0"
 description = ""
 optional = false
@@ -805,7 +805,7 @@ transformers = "^4.46.2"
 
 [package.source]
 type = "directory"
-url = "packages/chatbot_pack"
+url = "cherrobot/packages/chatbot_pack"
 
 [[package]]
 name = "chroma-hnswlib"
@@ -5473,13 +5473,13 @@ win32 = ["pywin32"]
 
 [[package]]
 name = "sentence-transformers"
-version = "3.2.1"
+version = "3.3.0"
 description = "State-of-the-Art Text Embeddings"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "sentence_transformers-3.2.1-py3-none-any.whl", hash = "sha256:c507e069eea33d15f1f2c72f74d7ea93abef298152cc235ab5af5e3a7584f738"},
-    {file = "sentence_transformers-3.2.1.tar.gz", hash = "sha256:9fc38e620e5e1beba31d538a451778c9ccdbad77119d90f59f5bce49c4148e79"},
+    {file = "sentence_transformers-3.3.0-py3-none-any.whl", hash = "sha256:5897c376fde1fea5f22a90ead2612278a464e52b8e42f1af95f84092c36bc23c"},
+    {file = "sentence_transformers-3.3.0.tar.gz", hash = "sha256:b91f0aea4ada72ed5a7cdbe8a6245a7152d0d9f84f336383778f8568e406b008"},
 ]
 
 [package.dependencies]
@@ -5492,7 +5492,7 @@ tqdm = "*"
 transformers = ">=4.41.0,<5.0.0"
 
 [package.extras]
-dev = ["accelerate (>=0.20.3)", "datasets", "pre-commit", "pytest", "pytest-cov"]
+dev = ["accelerate (>=0.20.3)", "datasets", "peft", "pre-commit", "pytest", "pytest-cov"]
 onnx = ["optimum[onnxruntime] (>=1.23.1)"]
 onnx-gpu = ["optimum[onnxruntime-gpu] (>=1.23.1)"]
 openvino = ["optimum-intel[openvino] (>=1.20.0)"]
@@ -6637,18 +6637,14 @@ files = [
 
 [[package]]
 name = "webcolors"
-version = "24.8.0"
+version = "24.11.1"
 description = "A library for working with the color formats defined by HTML and CSS."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "webcolors-24.8.0-py3-none-any.whl", hash = "sha256:fc4c3b59358ada164552084a8ebee637c221e4059267d0f8325b3b560f6c7f0a"},
-    {file = "webcolors-24.8.0.tar.gz", hash = "sha256:08b07af286a01bcd30d583a7acadf629583d1f79bfef27dd2c2c5c263817277d"},
+    {file = "webcolors-24.11.1-py3-none-any.whl", hash = "sha256:515291393b4cdf0eb19c155749a096f779f7d909f7cceea072791cb9095b92e9"},
+    {file = "webcolors-24.11.1.tar.gz", hash = "sha256:ecb3d768f32202af770477b8b65f318fa4f566c22948673a977b00d589dd80f6"},
 ]
-
-[package.extras]
-docs = ["furo", "sphinx", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-notfound-page", "sphinxext-opengraph"]
-tests = ["coverage[toml]"]
 
 [[package]]
 name = "webencodings"
@@ -6963,4 +6959,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "b17cf98d48a5fbc6877cc69d01965b2f588edf186ef28d5ebb32fa4707ae9b26"
+content-hash = "d10b5229f2b93d518c101476b100bb2c0acb6bc6e52bd2f5fddb0cac7e975b5a"
