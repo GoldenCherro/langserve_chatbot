@@ -1,9 +1,0 @@
-[service]
-name = "langserve-chatbot"
-
-[build]
-builder = "nixpacks"
-buildCommand = "docker build . -t cherrobot"
-
-[deploy]
-startCommand = "docker run --env-file .env -p 8000:8000 -p 8501:8501 cherrobot"
