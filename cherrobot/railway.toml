@@ -1,6 +1,9 @@
+[service]
+name = "langserve-chatbot"
+
 [build]
 builder = "nixpacks"
-buildCommand = "poetry install"
+buildCommand = "docker build . -t cherrobot"
 
 [deploy]
-startCommand = "poetry run langchain serve"
+startCommand = "docker run --env-file .env -p 8000:8000 -p 8501:8501 cherrobot"
