@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from langserve import add_routes
-from chatbot_pack.components.stateful_chain import conversational_rag_chain 
+from chatbot_pack.components.app import rag_chat
 
 app = FastAPI()
 
@@ -10,7 +10,7 @@ app = FastAPI()
 async def redirect_root_to_docs():
     return RedirectResponse("/docs")
 
-add_routes(app, conversational_rag_chain)
+add_routes(app, rag_chat)
 
 if __name__ == "__main__":
     import uvicorn
