@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 # Optimiza la instalación de paquetes y evita dependencias recomendadas
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git curl sudo && \
+    apt-get install -y --no-install-recommends git curl sudo iputils-ping && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Instala Poetry sin crear virtualenvs
@@ -23,5 +23,8 @@ RUN chmod +x /code/pull_model.sh /code/entrypoint.sh
 
 # Expone el puerto y define el entrypoint y el comando de ejecución
 EXPOSE 8000
+EXPOSE 11434
+EXPOSE 8501
+
 ENTRYPOINT ["/code/entrypoint.sh"]
-CMD ["sh", "-c", "uvicorn app.server:app --host 0.0.0.0 --port 8000"]
+

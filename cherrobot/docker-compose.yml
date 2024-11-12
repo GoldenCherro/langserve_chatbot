@@ -19,8 +19,10 @@ services:
       context: .
     ports:
       - "8000:8000"
+      - "8501:8501"
     environment:
       - OLLAMA_URL=http://ollama:11434/  # URL de Ollama en la misma red de Docker
+      - RAG_CHAIN_URL=http://localhost:8000/  # URL del server en la misma red de Docker
     networks:
       - app-network
     depends_on:

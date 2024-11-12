@@ -1,6 +1,0 @@
-[build]
-builder = "nixpacks"
-buildCommand = "poetry install"
-
-[deploy]
-startCommand = " poetry run fastapi run src/api/server.py"
