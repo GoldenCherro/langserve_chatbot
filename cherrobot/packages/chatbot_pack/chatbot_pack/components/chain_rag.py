@@ -5,7 +5,6 @@ from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_ollama import ChatOllama
 
 def get_retriever_chain(vector_store: InMemoryVectorStore, llm: ChatOllama):
-    llm = ChatOllama(model="llama3.1", temperature=0,)
     retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 6})
      ### Contextualize question ###
     contextualize_q_system_prompt = """Given a chat history and the latest user question \

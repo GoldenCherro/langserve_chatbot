@@ -1,0 +1,34 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia # Specifies the driver to use for GPU
+              count: 1 # Reserves 1 GPU
+              capabilities: [gpu] # Specifies that the device capability is GPU
+    ports:
+      - "11434:11434"
+    networks:
+      - app-network
+    container_name: ollama
+
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_URL=http://ollama:11434/  # URL de Ollama en la misma red de Docker
+    networks:
+      - app-network
+    depends_on:
+      - ollama
+    entrypoint: ["/code/entrypoint.sh"]
+    container_name: app
+
+networks:
+  app-network:
+    driver: bridge
+

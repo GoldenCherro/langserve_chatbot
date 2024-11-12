@@ -7,7 +7,7 @@ from .vector_store import get_vector_store
 from langgraph.graph import CompiledGraph
 
 def agent_rag() -> CompiledGraph:
-    llm = ChatOllama(model="llama3.1", temperature=0,) 
+    llm = ChatOllama(model="llama3.2", temperature=0,) 
     file_path = "../../sourceFiles/AIEngineer.pdf"
     web_paths = ("https://www.promtior.ai/service","https://www.promtior.ai/")
     
