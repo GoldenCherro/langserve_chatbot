@@ -6,7 +6,7 @@ The chatbot uses the **Groq** chat model for conversational responses ([Groq Cha
 
 The backend server handles the RAG process via `langserve` in FastAPI, and the frontend application in Streamlit consumes the server's responses, providing a user-friendly interface for interaction.
 
-## Fine-Tuning Prompts
+## Instruction Tuning Prompts
 
 This project uses custom prompts to fine-tune the LLM's responses, helping it answer user questions effectively while remembering chat history context. Below are the two primary prompts:
 
